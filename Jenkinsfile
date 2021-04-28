@@ -15,10 +15,10 @@ pipeline {
                     stages {
                         stage("Alert-If-Issues1") {
                             steps {
-                                withSonarQubeEnv('LocalSonar') {
-					sh '/Applications/SonarScanner/bin/sonar-scanner -Dproject.settings=/Applications/sonar-scanner.properties'
+                                //withSonarQubeEnv('LocalSonar') {
+				//	sh '/Applications/SonarScanner/bin/sonar-scanner -Dproject.settings=/Applications/sonar-scanner.properties'
 					//sh 'env'
-              			}
+              			//}
                                 snDevOpsStep()
                                 echo 'test'
                             }
