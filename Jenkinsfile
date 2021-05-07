@@ -120,7 +120,7 @@ pipeline {
            stages{
              stage('sub-prod') {
                steps {
-                   sleep 100
+                   echo 'test'
                 }
              }
            }
