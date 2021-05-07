@@ -114,5 +114,16 @@ pipeline {
              }
            }
         }
+	    
+	    
+	stage('PROD1') {
+           stages{
+             stage('sub-prod') {
+               steps {
+                   sleep 100
+                }
+             }
+           }
+        }
     }
 }
