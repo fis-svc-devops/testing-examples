@@ -6,7 +6,7 @@ pipeline {
     }
 
     
-    //Test number 2
+    //Test number 3
     agent any
     
     stages {
@@ -29,11 +29,11 @@ pipeline {
             steps {
                 script {
                     stageName = 'Publish artifact to ServiceNow'
-                    def applicationJar = "application-springboot-123.jar";
+                    def applicationJar = "application-springboot-1.0.0.jar";
                     def repoPath = "access-to-apm/application";
                     def packageName = "applicationpackage";
-                    //snDevOpsArtifact(artifactsPayload: """{"artifacts": [{"name": "${applicationJar}", "version": "123","semanticVersion": "123","repositoryName": "${repoPath}"], "branchName": "test"}""")
-                    //snDevOpsPackage(name: "${packageName}", artifactsPayload: """{"artifacts": [{"name": "${applicationJar}", "version": "123","semanticVersion": "123,"repositoryName": "${repoPath}"}], "branchName": "test"}""")
+                    snDevOpsArtifact(artifactsPayload: """{"artifacts": [{"name": "${applicationJar}", "version": "1.0.0","semanticVersion": "1.0.0","repositoryName": "${repoPath}"], "branchName": "test"}""")
+                    snDevOpsPackage(name: "${packageName}", artifactsPayload: """{"artifacts": [{"name": "${applicationJar}", "version": "1.0.0","semanticVersion": "1.0.0,"repositoryName": "${repoPath}"}], "branchName": "test"}""")
                 }
             }
         }
