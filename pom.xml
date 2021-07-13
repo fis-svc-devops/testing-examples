@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.pik.contact</groupId>
     <artifactId>contact</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>1.0.0</version>
     <!-- uncomment for WAR deployment
     <packaging>war</packaging>
     -->
