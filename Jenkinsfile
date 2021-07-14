@@ -32,7 +32,7 @@ pipeline {
                     def applicationJar = "application-springboot-1.0.0.jar";
                     def repoPath = "access-to-apm/application";
                     def packageName = "applicationpackage";
-                    snDevOpsArtifact(artifactsPayload: """{"artifacts": [{"name": "${applicationJar}", "version": "2.${env.BUILD_NUMBER}.0","semanticVersion": "1.0.0","repositoryName": "${repoPath}"], "branchName": "test"}""")
+                    snDevOpsArtifact(artifactsPayload: """{"artifacts": [{"name": "${applicationJar}", "version": "2.${env.BUILD_NUMBER}.0","semanticVersion": "1.0.0","repositoryName": "${repoPath}"}], "branchName": "test"}""")
                     snDevOpsPackage(name: "${packageName}", artifactsPayload: """{"artifacts": [{"name": "${applicationJar}", "version": "1.0.0","semanticVersion": "1.0.0,"repositoryName": "${repoPath}"}], "branchName": "test"}""")
                 }
             }
