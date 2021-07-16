@@ -6,7 +6,7 @@ pipeline {
 	            steps {
 	                snDevOpsStep()
 			snDevOpsChange()
-	                //sleep 10   
+	                //sleep 10 
 	                echo 'test'
 	            }
 	        }
