@@ -92,7 +92,7 @@ pipeline {
                     }
                 }
             }
-        }
+        }  
         stage('APP: Checkmarx') {
             steps {
                 script {
