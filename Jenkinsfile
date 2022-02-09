@@ -5,7 +5,7 @@ pipeline {
         disableConcurrentBuilds()
     }
 
-    
+    //Add Detail
     //Test US517587: [This is a tracked rally record] 28/7/22
     agent any
     
