@@ -36,7 +36,7 @@ pipeline {
                     snDevOpsPackage(name: "${packageName}", artifactsPayload: """{"artifacts": [{"name": "${applicationJar}", "version": "2.${env.BUILD_NUMBER}.0","semanticVersion": "1.0.0","repositoryName": "${repoPath}"}], "branchName": "test"}""")
                 }
             }
-        }
+        } 
         stage('Verify code formatting') {
             steps {
                 script {
